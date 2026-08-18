@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Júnior Coifas | Limpeza e Higienização de Coifas</title>
+<meta name="description" content="Limpeza, higienização e manutenção de coifas residenciais e industriais. Solicite seu orçamento com a Júnior Coifas pelo WhatsApp.">
+<meta property="og:title" content="Júnior Coifas | Limpeza e Higienização de Coifas">
+<meta property="og:description" content="Limpeza, higienização e manutenção de coifas residenciais e industriais. Solicite seu orçamento com a Júnior Coifas pelo WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230b0b0c'/%3E%3Cpath d='M22 34h56l-8 42H30z' fill='none' stroke='%23c62330' stroke-width='6'/%3E%3Cline x1='22' y1='34' x2='78' y2='34' stroke='%23c62330' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0c;
+    --bg-alt:#131315;
+    --surface:#19191c;
+    --surface-2:#202023;
+    --line: rgba(255,255,255,0.08);
+    --steel:#54575d;
+    --steel-light:#9a9ea3;
+    --text:#f1efe9;
+    --text-muted:#a6a5a2;
+    --text-dim:#726f6a;
+    --red:#c6222f;
+    --red-dark:#88141e;
+    --red-bright:#e2394a;
+    --red-glow: rgba(198,34,47,0.35);
+    --radius: 3px;
+    --maxw: 1200px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  section{position:relative;}
+
+  h1,h2,h3,h4{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:600;
+    line-height:1.15;
+  }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Oswald', sans-serif;
+    font-size:12.5px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--red-bright);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:2px;
+    background:var(--red);
+  }
+
+  .section-title{
+    font-size:clamp(28px, 4vw, 42px);
+    max-width:780px;
+    margin-bottom:16px;
+  }
+  .section-sub{
+    color:var(--text-muted);
+    max-width:620px;
+    font-size:16px;
+    font-weight:300;
+  }
+  .section-pad{ padding:110px 0; }
+
+  /* rivet divider — nods to sheet-metal duct construction */
+  .rivet-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:0 0 0 0;
+  }
+  .rivet-divider .line{
+    flex:1;
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
+  }
+  .rivet-divider .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--steel);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  /* Buttons — only clickable elements get feedback */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:'Oswald', sans-serif;
+    font-size:14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:16px 30px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    border:1px solid transparent;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--red);
+    color:#fff;
+    box-shadow: 0 8px 24px -8px var(--red-glow);
+  }
+  .btn-primary:hover{
+    background:var(--red-bright);
+    transform:translateY(-2px);
+    box-shadow: 0 12px 28px -8px var(--red-glow);
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--text);
+    border-color:var(--line);
+  }
+  .btn-ghost:hover{
+    border-color:var(--steel-light);
+    background:rgba(255,255,255,0.03);
+    transform:translateY(-2px);
+  }
+  .btn-small{ padding:12px 22px; font-size:12.5px; }
+
+  /* HEADER */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:1000;
+    background:rgba(11,11,12,0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:76px;
+  }
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+  }
+  .brand-name{
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:0.03em;
+    color:var(--text);
+  }
+  .brand-name span{ color:var(--red-bright); }
+  .brand-sub{
+    font-size:10.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    margin-top:4px;
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:36px;
+  }
+  .nav-links a{
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    position:relative;
+    padding:4px 0;
+    transition: color 0.18s ease;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0; bottom:-2px;
+    width:0%; height:2px;
+    background:var(--red);
+    transition:width 0.22s ease;
+  }
+  .nav-links a:hover{ color:var(--text); }
+  .nav-links a:hover::after{ width:100%; }
+
+  .nav-cta{ display:flex; align-items:center; gap:20px; }
+
+  .burger{
+    display:none;
+    width:26px; height:20px;
+    position:relative;
+    cursor:pointer;
+    border:none;
+    background:none;
+  }
+  .burger span{
+    position:absolute; left:0; right:0; height:2px;
+    background:var(--text);
+    transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+  }
+  .burger span:nth-child(1){ top:0; }
+  .burger span:nth-child(2){ top:9px; }
+  .burger span:nth-child(3){ top:18px; }
+  .burger.open span:nth-child(1){ top:9px; transform:rotate(45deg); }
+  .burger.open span:nth-child(2){ opacity:0; }
+  .burger.open span:nth-child(3){ top:9px; transform:rotate(-45deg); }
+
+  .mobile-menu{
+    display:none;
+    position:fixed;
+    top:76px; left:0; right:0;
+    background:rgba(11,11,12,0.98);
+    border-bottom:1px solid var(--line);
+    padding:10px 32px 26px;
+    flex-direction:column;
+    gap:2px;
+    transform:translateY(-8px);
+    opacity:0;
+    pointer-events:none;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+    z-index:999;
+  }
+  .mobile-menu.show{
+    display:flex;
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .mobile-menu a{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-size:14px;
+    color:var(--text-muted);
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-menu a:hover{ color:var(--text); }
+  .mobile-menu .btn{ margin-top:18px; width:100%; }
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:76px;
+    position:relative;
+    background:#0b0b0c;
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(180deg, rgba(9,9,10,0.55) 0%, rgba(9,9,10,0.72) 45%, rgba(9,9,10,0.96) 100%),
+      linear-gradient(90deg, rgba(9,9,10,0.92) 0%, rgba(9,9,10,0.55) 42%, rgba(9,9,10,0.35) 100%),
+      url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1800&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+  }
+  .hero-bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background: radial-gradient(ellipse 700px 500px at 85% 20%, var(--red-glow), transparent 60%);
+    opacity:0.5;
+    mix-blend-mode:screen;
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    max-width:640px;
+    padding:60px 0;
+  }
+  .hero h1{
+    font-size:clamp(38px, 6vw, 62px);
+    margin-bottom:22px;
+  }
+  .hero h1 .accent{ color:var(--red-bright); }
+  .hero p{
+    font-size:17px;
+    color:var(--text-muted);
+    max-width:520px;
+    margin-bottom:36px;
+    font-weight:300;
+  }
+  .hero-actions{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:48px;
+  }
+  .hero-stats{
+    display:flex;
+    gap:40px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    max-width:520px;
+  }
+  .hero-stat b{
+    display:block;
+    font-family:'Oswald', sans-serif;
+    font-size:26px;
+    color:var(--text);
+  }
+  .hero-stat span{
+    font-size:12px;
+    color:var(--text-dim);
+    letter-spacing:0.04em;
+  }
+
+  /* gauge — signature motif, echoes a grease/pressure gauge on exhaust equipment */
+  .gauge-wrap{
+    position:absolute;
+    right:64px;
+    bottom:70px;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    opacity:0.9;
+  }
+  .gauge{
+    width:96px; height:96px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background: radial-gradient(circle at 35% 30%, #232326, #0f0f10 70%);
+    position:relative;
+    box-shadow: inset 0 0 0 6px rgba(255,255,255,0.02), 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .gauge .needle{
+    position:absolute;
+    left:50%; top:50%;
+    width:2px; height:34px;
+    background:var(--red-bright);
+    transform-origin:bottom center;
+    transform:translate(-50%,-100%) rotate(35deg);
+    border-radius:2px;
+    box-shadow:0 0 8px var(--red-glow);
+  }
+  .gauge .hub{
+    position:absolute; left:50%; top:50%;
+    width:8px; height:8px; border-radius:50%;
+    background:var(--steel-light);
+    transform:translate(-50%,-50%);
+  }
+  .gauge-label{
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    line-height:1.5;
+  }
+  .gauge-label b{ display:block; color:var(--red-bright); font-size:12px; }
+
+  /* Highlight strip */
+  .strip{
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:56px 0;
+  }
+  .strip .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  .strip h3{
+    font-size:clamp(20px,2.6vw,28px);
+    max-width:560px;
+    color:var(--text);
+  }
+  .strip p{
+    color:var(--text-muted);
+    max-width:420px;
+    font-weight:300;
+    font-size:15px;
+  }
+
+  /* SERVICES GRID */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:56px;
+  }
+  .service-card{
+    background:var(--bg);
+    padding:38px 34px;
+    position:relative;
+  }
+  .service-card .num{
+    font-family:'Oswald', sans-serif;
+    font-size:12px;
+    color:var(--text-dim);
+    letter-spacing:0.1em;
+    margin-bottom:22px;
+    display:block;
+  }
+  .service-card h4{
+    font-size:18px;
+    margin-bottom:12px;
+    color:var(--text);
+  }
+  .service-card p{
+    color:var(--text-muted);
+    font-size:14.5px;
+    font-weight:300;
+  }
+  .service-card .bar{
+    position:absolute; left:0; top:0; bottom:0;
+    width:3px;
+    background:transparent;
+  }
+
+  /* BEFORE/AFTER SLIDER — signature interactive element */
+  .ba-section{ background:var(--bg-alt); }
+  .ba-slider{
+    position:relative;
+    width:100%;
+    aspect-ratio: 16/9;
+    max-height:560px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-top:50px;
+    border:1px solid var(--line);
+    cursor: ew-resize;
+    user-select:none;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.6);
+  }
+  .ba-img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .ba-after{ z-index:1; }
+  .ba-before-wrap{
+    position:absolute; inset:0;
+    z-index:2;
+    width:50%;
+    overflow:hidden;
+  }
+  .ba-before-wrap img{
+    width: var(--slider-w, 1000px);
+    height:100%;
+    object-fit:cover;
+    max-width:none;
+  }
+  .ba-tag{
+    position:absolute;
+    top:20px;
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    padding:8px 14px;
+    border-radius:2px;
+    z-index:4;
+    backdrop-filter:blur(6px);
+  }
+  .ba-tag.before{ left:20px; background:rgba(136,20,30,0.55); color:#fff; }
+  .ba-tag.after{ right:20px; background:rgba(20,20,22,0.6); border:1px solid var(--line); color:var(--text); }
+  .ba-handle{
+    position:absolute;
+    top:0; bottom:0;
+    left:50%;
+    width:2px;
+    background:var(--text);
+    z-index:5;
+    transform:translateX(-50%);
+    pointer-events:none;
+  }
+  .ba-handle::after{
+    content:"⟷";
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:44px; height:44px;
+    border-radius:50%;
+    background:var(--red);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px;
+    box-shadow:0 6px 20px -6px var(--red-glow);
+  }
+  .ba-caption{
+    margin-top:16px;
+    font-size:13px;
+    color:var(--text-dim);
+    text-align:center;
+  }
+  .ba-thumbs{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:18px;
+    margin-top:36px;
+  }
+  .ba-thumb{
+    border-radius:var(--radius);
+    overflow:hidden;
+    aspect-ratio:4/3;
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .ba-thumb img{ width:100%; height:100%; object-fit:cover; }
+  .ba-thumb span{
+    position:absolute; bottom:0; left:0; right:0;
+    padding:8px 10px;
+    font-family:'Oswald', sans-serif;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    background:linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+    color:var(--text-muted);
+  }
+
+  /* GALLERY */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows:180px;
+    gap:10px;
+    margin-top:50px;
+  }
+  .gallery-grid img{
+    width:100%; height:100%;
+    object-fit:cover;
+    border-radius:var(--radius);
+    filter:saturate(0.94) contrast(1.05);
+  }
+  .g-tall{ grid-row: span 2; }
+  .g-wide{ grid-column: span 2; }
+
+  /* BENEFITS */
+  .benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+    margin-top:56px;
+  }
+  .benefit{
+    padding:30px 26px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+  }
+  .benefit .icon{
+    width:38px; height:38px;
+    margin-bottom:20px;
+    color:var(--red-bright);
+  }
+  .benefit h4{
+    font-size:15.5px;
+    margin-bottom:10px;
+    color:var(--text);
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .benefit p{
+    font-size:14px;
+    color:var(--text-muted);
+    font-weight:300;
+  }
+
+  /* SPLIT SECTIONS (industrial / residential) */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:480px;
+  }
+  .split-panel{
+    padding:80px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+  }
+  .split-panel.dark{ background:var(--bg-alt); }
+  .split-panel.img{
+    background-size:cover;
+    background-position:center;
+    position:relative;
+  }
+  .split-panel.img::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(90deg, rgba(11,11,12,0.2), rgba(11,11,12,0.75));
+  }
+  .split-panel h3{
+    font-size:clamp(22px,2.8vw,30px);
+    max-width:420px;
+    margin-bottom:16px;
+  }
+  .split-panel p{
+    color:var(--text-muted);
+    font-weight:300;
+    max-width:420px;
+    margin-bottom:28px;
+    font-size:15px;
+  }
+
+  /* PROCESS */
+  .process{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    margin-top:60px;
+    position:relative;
+  }
+  .process::before{
+    content:"";
+    position:absolute;
+    top:22px; left:6%; right:6%;
+    height:1px;
+    background:var(--line);
+  }
+  .process-step{
+    text-align:left;
+    padding:0 24px 0 0;
+    position:relative;
+  }
+  .process-step .step-num{
+    width:44px; height:44px;
+    border-radius:50%;
+    background:var(--bg);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    color:var(--red-bright);
+    margin-bottom:24px;
+    position:relative;
+    z-index:2;
+  }
+  .process-step h4{
+    font-size:15px;
+    text-transform:none;
+    letter-spacing:0;
+    color:var(--text);
+    margin-bottom:8px;
+  }
+  .process-step p{
+    font-size:13.5px;
+    color:var(--text-muted);
+    font-weight:300;
+  }
+
+  /* ABOUT */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .about-grid img{
+    border-radius:var(--radius);
+    filter:saturate(0.92);
+  }
+  .about-tags{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:26px;
+  }
+  .about-tags span{
+    font-family:'Oswald', sans-serif;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    border:1px solid var(--line);
+    padding:9px 16px;
+    border-radius:2px;
+  }
+
+  /* CTA BAND */
+  .cta-band{
+    background:linear-gradient(135deg, #14090b, #0b0b0c 60%);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:100px 0;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-band::before{
+    content:"";
+    position:absolute;
+    width:600px; height:600px;
+    background:radial-gradient(circle, var(--red-glow), transparent 65%);
+    top:-260px; left:50%;
+    transform:translateX(-50%);
+    opacity:0.6;
+  }
+  .cta-band h2{
+    font-size:clamp(28px,4.4vw,44px);
+    max-width:700px;
+    margin:0 auto 18px;
+    position:relative;
+  }
+  .cta-band p{
+    color:var(--text-muted);
+    max-width:480px;
+    margin:0 auto 36px;
+    font-weight:300;
+    position:relative;
+  }
+  .cta-band .btn{ position:relative; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+    margin-top:56px;
+  }
+  .testimonial{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 28px;
+  }
+  .testimonial p{
+    font-size:15px;
+    color:var(--text);
+    font-weight:300;
+    line-height:1.7;
+    margin-bottom:22px;
+  }
+  .testimonial-who{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .avatar{
+    width:36px; height:36px;
+    border-radius:50%;
+    background:var(--steel);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    color:var(--bg);
+    font-weight:600;
+  }
+  .testimonial-who .name{ font-size:13.5px; color:var(--text); }
+  .testimonial-who .role{ font-size:12px; color:var(--text-dim); }
+
+  /* FAQ */
+  .faq-list{ margin-top:50px; border-top:1px solid var(--line); }
+  .faq-item{ border-bottom:1px solid var(--line); }
+  .faq-q{
+    width:100%;
+    background:none;
+    border:none;
+    color:var(--text);
+    text-align:left;
+    padding:24px 4px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family:'Oswald', sans-serif;
+    font-size:15.5px;
+    letter-spacing:0.01em;
+    cursor:pointer;
+    gap:20px;
+    transition: color 0.18s ease;
+  }
+  .faq-q:hover{ color:var(--red-bright); }
+  .faq-q .plus{
+    flex-shrink:0;
+    width:26px; height:26px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    transition:transform 0.25s ease, border-color 0.25s ease;
+  }
+  .faq-q .plus::before, .faq-q .plus::after{
+    content:"";
+    position:absolute;
+    background:var(--text-muted);
+  }
+  .faq-q .plus::before{ width:10px; height:1px; }
+  .faq-q .plus::after{ width:1px; height:10px; }
+  .faq-item.open .faq-q .plus{ transform:rotate(135deg); border-color:var(--red); }
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 0.32s ease;
+  }
+  .faq-a p{
+    padding:0 40px 26px 4px;
+    color:var(--text-muted);
+    font-size:14.5px;
+    font-weight:300;
+    max-width:640px;
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--bg-alt);
+    border-top:1px solid var(--line);
+    padding:70px 0 30px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+  }
+  .footer-brand .brand-name{ font-size:22px; margin-bottom:8px; }
+  .footer-brand p{
+    color:var(--text-muted);
+    font-size:14px;
+    font-weight:300;
+    max-width:280px;
+    margin-top:14px;
+  }
+  .footer-col h5{
+    font-family:'Oswald', sans-serif;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    margin-bottom:20px;
+  }
+  .footer-col a, .footer-col p{
+    display:block;
+    color:var(--text-muted);
+    font-size:14px;
+    margin-bottom:12px;
+    font-weight:300;
+    transition:color 0.18s ease;
+  }
+  .footer-col a:hover{ color:var(--red-bright); }
+  .footer-bottom{
+    border-top:1px solid var(--line);
+    padding-top:26px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:12.5px;
+    color:var(--text-dim);
+  }
+
+  /* WHATSAPP FLOAT */
+  .wa-float{
+    position:fixed;
+    right:26px;
+    bottom:26px;
+    z-index:900;
+    width:60px; height:60px;
+    border-radius:50%;
+    background:var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 12px 30px -8px var(--red-glow);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .wa-float:hover{ transform:translateY(-3px) scale(1.05); background:var(--red-bright); }
+  .wa-float svg{ width:28px; height:28px; }
+  .wa-tooltip{
+    position:absolute;
+    right:72px;
+    top:50%;
+    transform:translateY(-50%);
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    padding:9px 14px;
+    border-radius:4px;
+    font-size:12.5px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.2s ease;
+  }
+  .wa-float:hover .wa-tooltip{ opacity:1; }
+
+  /* reveal-on-scroll */
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; scroll-behavior:auto !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--red-bright);
+    outline-offset:3px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px){
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+    .benefits-grid{ grid-template-columns:repeat(2,1fr); }
+    .about-grid{ grid-template-columns:1fr; gap:40px; }
+    .gallery-grid{ grid-template-columns:repeat(3,1fr); }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+
+  @media (max-width: 860px){
+    .nav-links{ display:none; }
+    .nav-cta .btn-small{ display:none; }
+    .burger{ display:block; }
+    .split{ grid-template-columns:1fr; }
+    .split-panel{ padding:60px 32px; }
+    .process{ grid-template-columns:1fr 1fr; row-gap:40px; }
+    .process::before{ display:none; }
+    .gauge-wrap{ display:none; }
+  }
+
+  @media (max-width: 640px){
+    .wrap{ padding:0 20px; }
+    .section-pad{ padding:74px 0; }
+    .services-grid{ grid-template-columns:1fr; }
+    .benefits-grid{ grid-template-columns:1fr; }
+    .testimonials-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; gap:36px; }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:140px; }
+    .g-wide{ grid-column:span 1; }
+    .g-tall{ grid-row:span 1; }
+    .ba-thumbs{ grid-template-columns:repeat(2,1fr); }
+    .hero-stats{ gap:26px; flex-wrap:wrap; }
+    .strip .wrap{ flex-direction:column; align-items:flex-start; }
+    .about-grid{ }
+    .hero-content{ padding:40px 0; }
+    .footer-bottom{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#inicio" class="brand">
+      <span class="brand-name">JÚNIOR <span>COIFAS</span></span>
+      <span class="brand-sub">Limpeza · Higienização · Manutenção</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#antes-depois">Antes e Depois</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-primary btn-small">Solicitar orçamento</a>
+      <button class="burger" id="burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#antes-depois">Antes e Depois</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+    <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Residencial &amp; Industrial</div>
+      <h1>Sua coifa limpa, higienizada e <span class="accent">pronta para trabalhar.</span></h1>
+      <p>Realizamos limpeza e higienização de coifas residenciais e industriais, removendo gordura, sujeira e resíduos acumulados para deixar seu equipamento muito mais limpo e bem cuidado.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <b>Residencial</b>
+          <span>e industrial</span>
+        </div>
+        <div class="hero-stat">
+          <b>Dutos &amp; filtros</b>
+          <span>limpeza completa</span>
+        </div>
+        <div class="hero-stat">
+          <b>Orçamento</b>
+          <span>direto no WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gauge-wrap">
+    <div class="gauge-label">Nível de<br><b>gordura acumulada</b></div>
+    <div class="gauge"><div class="needle"></div><div class="hub"></div></div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <h3>Gordura acumulada não combina com uma cozinha limpa e bem cuidada.</h3>
+    <p>A limpeza periódica ajuda a manter a coifa em melhores condições de uso e deixa o ambiente mais organizado e profissional.</p>
+  </div>
+</section>
+
+<section class="section-pad" id="servicos">
+  <div class="wrap">
+    <div class="eyebrow reveal">O que fazemos</div>
+    <h2 class="section-title reveal">Serviços de limpeza e higienização</h2>
+    <p class="section-sub reveal">Atendimento para cozinhas residenciais e para operações industriais que exigem cuidado constante com o sistema de exaustão.</p>
+
+    <div class="services-grid">
+      <div class="service-card reveal"><span class="num">01</span><h4>Limpeza de Coifas Residenciais</h4><p>Limpeza detalhada para coifas utilizadas em cozinhas residenciais, removendo gordura e sujeiras acumuladas.</p></div>
+      <div class="service-card reveal"><span class="num">02</span><h4>Higienização de Coifas Industriais</h4><p>Serviço voltado para cozinhas profissionais, restaurantes, lanchonetes, hotéis, empresas e estabelecimentos comerciais.</p></div>
+      <div class="service-card reveal"><span class="num">03</span><h4>Limpeza de Dutos</h4><p>Limpeza de dutos e componentes relacionados ao sistema de exaustão, conforme as condições do equipamento.</p></div>
+      <div class="service-card reveal"><span class="num">04</span><h4>Limpeza de Motores</h4><p>Higienização e limpeza dos componentes acessíveis do sistema de exaustão.</p></div>
+      <div class="service-card reveal"><span class="num">05</span><h4>Filtros e Componentes</h4><p>Limpeza de filtros e partes removíveis que acumulam gordura e resíduos.</p></div>
+      <div class="service-card reveal"><span class="num">06</span><h4>Manutenção e Cuidados</h4><p>Avaliação visual e cuidados preventivos relacionados ao sistema de coifa e exaustão.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad ba-section" id="antes-depois">
+  <div class="wrap">
+    <div class="eyebrow reveal">Resultado visual</div>
+    <h2 class="section-title reveal">Veja a diferença da limpeza profissional</h2>
+    <p class="section-sub reveal">Arraste o controle para comparar o padrão de um sistema de exaustão sujo com o resultado de uma higienização bem feita.</p>
+
+    <div class="ba-slider reveal" id="baSlider">
+      <img class="ba-img ba-after" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1400&auto=format&fit=crop" alt="Coifa industrial de aço inoxidável limpa e higienizada">
+      <div class="ba-before-wrap" id="baBeforeWrap">
+        <img id="baBeforeImg" src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=1400&auto=format&fit=crop" alt="Coifa industrial com acúmulo de gordura antes da limpeza">
+      </div>
+      <span class="ba-tag before">Antes</span>
+      <span class="ba-tag after">Depois</span>
+      <div class="ba-handle" id="baHandle"></div>
+    </div>
+    <p class="ba-caption">Imagens ilustrativas do padrão de sujidade tratado e do acabamento final do serviço.</p>
+
+    <div class="ba-thumbs">
+      <div class="ba-thumb reveal"><img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=600&auto=format&fit=crop" alt="Filtro de coifa com gordura acumulada"><span>Filtros</span></div>
+      <div class="ba-thumb reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Duto de exaustão industrial"><span>Dutos</span></div>
+      <div class="ba-thumb reveal"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop" alt="Cozinha industrial em aço inox"><span>Motores</span></div>
+      <div class="ba-thumb reveal"><img src="https://images.unsplash.com/photo-1560717845-968823efbee1?q=80&w=600&auto=format&fit=crop" alt="Coifa residencial em cozinha limpa"><span>Acabamento</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow reveal">Galeria</div>
+    <h2 class="section-title reveal">Cozinhas, equipamentos e ambientes que cuidamos</h2>
+    <div class="gallery-grid">
+      <img class="reveal g-tall" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop" alt="Cozinha industrial com coifa de aço inox">
+      <img class="reveal" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop" alt="Chef trabalhando em cozinha profissional">
+      <img class="reveal g-wide" src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1000&auto=format&fit=crop" alt="Ambiente de restaurante com estrutura de exaustão">
+      <img class="reveal" src="https://images.unsplash.com/photo-1571066811602-716837d681de?q=80&w=800&auto=format&fit=crop" alt="Cozinha residencial com coifa">
+      <img class="reveal" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop" alt="Detalhe de equipamento de cozinha em inox">
+      <img class="reveal g-tall" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop" alt="Cozinha comercial ampla">
+      <img class="reveal" src="https://images.unsplash.com/photo-1461988091159-192b6df7054f?q=80&w=800&auto=format&fit=crop" alt="Profissional de cozinha em ambiente comercial">
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="beneficios" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="eyebrow reveal">Vantagens</div>
+    <h2 class="section-title reveal">Por que manter sua coifa limpa?</h2>
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M6 6l1 13a2 2 0 002 2h6a2 2 0 002-2l1-13M10 10v6M14 10v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4>Mais limpeza</h4>
+        <p>Reduz o acúmulo de gordura e sujeira nos componentes acessíveis do equipamento.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 10h16M10 4v16" /></svg>
+        <h4>Ambiente mais organizado</h4>
+        <p>Uma cozinha limpa transmite mais cuidado e profissionalismo.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 4v5c0 4.5-3.4 7.9-8 9-4.6-1.1-8-4.5-8-9V7l8-4z" stroke-linejoin="round"/></svg>
+        <h4>Melhor conservação</h4>
+        <p>A higienização periódica contribui para manter os equipamentos bem cuidados.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+        <h4>Mais tranquilidade para sua rotina</h4>
+        <p>Conte com uma equipe especializada para realizar o serviço.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4>Aparência profissional</h4>
+        <p>Um sistema de exaustão limpo melhora visualmente o ambiente.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21c0-4 4-6 9-6s9 2 9 6M12 11a4 4 0 100-8 4 4 0 000 8z" stroke-linejoin="round"/></svg>
+        <h4>Atendimento residencial e industrial</h4>
+        <p>Atendemos diferentes tipos de equipamentos e ambientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="split-panel img" style="background-image:url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1200&auto=format&fit=crop');">
+    <div style="position:relative; z-index:1;">
+      <div class="eyebrow reveal">Para empresas</div>
+      <h3 class="reveal">Sua cozinha trabalha todos os dias. A limpeza também precisa fazer parte da rotina.</h3>
+      <p class="reveal">Restaurantes, lanchonetes, bares, hotéis, cozinhas profissionais e empresas precisam manter seus sistemas de exaustão bem cuidados. A Júnior Coifas realiza serviços de limpeza e higienização para ambientes que exigem atenção e cuidado constantes.</p>
+      <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-primary reveal">Solicitar orçamento para empresa</a>
+    </div>
+  </div>
+  <div class="split-panel dark">
+    <div class="eyebrow reveal">Para sua casa</div>
+    <h3 class="reveal">Também cuidamos da sua coifa residencial.</h3>
+    <p class="reveal">A gordura também se acumula em cozinhas residenciais. Uma limpeza periódica ajuda a manter a coifa mais limpa, bonita e bem cuidada.</p>
+    <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-ghost reveal">Agendar limpeza</a>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow reveal">Como funciona</div>
+    <h2 class="section-title reveal">Do primeiro contato ao resultado final</h2>
+    <div class="process">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <h4>Entre em contato</h4>
+        <p>Envie uma mensagem pelo WhatsApp e explique qual serviço você precisa.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <h4>Avaliamos o serviço</h4>
+        <p>Entendemos o tipo de coifa, ambiente e necessidade de limpeza.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <h4>Realizamos a limpeza</h4>
+        <p>Nossa equipe executa o serviço com cuidado e atenção aos detalhes.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">04</div>
+        <h4>Confira o resultado</h4>
+        <p>Após a higienização, você poderá conferir visualmente a diferença.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="sobre" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="about-grid">
+      <img class="reveal" src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=900&auto=format&fit=crop" alt="Equipe de limpeza profissional trabalhando em cozinha">
+      <div class="reveal">
+        <div class="eyebrow">Sobre a empresa</div>
+        <h2 class="section-title">Júnior Coifas</h2>
+        <p class="section-sub">Trabalhamos com limpeza, higienização e manutenção de coifas residenciais e industriais, atendendo clientes que procuram um serviço cuidadoso, profissional e focado em deixar cada equipamento mais limpo e bem cuidado.</p>
+        <div class="about-tags">
+          <span>Atendimento profissional</span>
+          <span>Serviço cuidadoso</span>
+          <span>Residencial e industrial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Sua coifa está precisando de uma limpeza?</h2>
+    <p>Envie algumas fotos pelo WhatsApp e fale com a Júnior Coifas para solicitar seu orçamento.</p>
+    <a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="btn btn-primary">Pedir orçamento pelo WhatsApp</a>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow reveal">Depoimentos</div>
+    <h2 class="section-title reveal">O que os clientes dizem</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <p>"A diferença depois da limpeza foi impressionante. A coifa ficou com outra aparência."</p>
+        <div class="testimonial-who">
+          <div class="avatar">M</div>
+          <div><div class="name">Marcos R.</div><div class="role">Cliente residencial</div></div>
+        </div>
+      </div>
+      <div class="testimonial reveal">
+        <p>"O atendimento foi muito bom e o serviço foi feito com bastante cuidado."</p>
+        <div class="testimonial-who">
+          <div class="avatar">C</div>
+          <div><div class="name">Camila S.</div><div class="role">Cliente residencial</div></div>
+        </div>
+      </div>
+      <div class="testimonial reveal">
+        <p>"Precisávamos limpar a coifa da cozinha da empresa e o resultado ficou muito bom."</p>
+        <div class="testimonial-who">
+          <div class="avatar">R</div>
+          <div><div class="name">Restaurante Sabor &amp; Cia</div><div class="role">Cliente industrial</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="faq" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="eyebrow reveal">Dúvidas frequentes</div>
+    <h2 class="section-title reveal">Perguntas frequentes</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Com que frequência devo limpar minha coifa?<span class="plus"></span></button>
+        <div class="faq-a"><p>Recomendamos uma avaliação periódica, já que a frequência ideal varia conforme o uso, o tipo de cozinha e o volume de gordura gerado no dia a dia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês fazem limpeza de coifa residencial?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim, atendemos coifas residenciais além de sistemas industriais e comerciais.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês atendem restaurantes e cozinhas industriais?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim, realizamos limpeza e higienização para restaurantes, lanchonetes, bares, hotéis e outras cozinhas profissionais.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês também limpam dutos e motores?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim, a limpeza pode incluir dutos e os componentes acessíveis do sistema de exaustão, conforme a condição do equipamento.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como solicitar um orçamento?<span class="plus"></span></button>
+        <div class="faq-a"><p>É só enviar uma mensagem pelo WhatsApp com o tipo de coifa e o ambiente. A partir daí, avaliamos o serviço necessário.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso enviar fotos pelo WhatsApp?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim, enviar fotos ajuda bastante na avaliação prévia do equipamento antes do orçamento.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Qual região vocês atendem?<span class="plus"></span></button>
+        <div class="faq-a"><p>Fale com a gente pelo WhatsApp informando sua localização para confirmarmos o atendimento na sua região.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">JÚNIOR <span style="color:var(--red-bright);">COIFAS</span></span>
+        <div class="brand-sub" style="margin-top:6px;">Limpeza · Higienização · Manutenção</div>
+        <p>Limpeza e higienização de coifas residenciais e industriais.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#antes-depois">Antes e Depois</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contato</h5>
+        <a href="https://wa.me/5514996587793" target="_blank" rel="noopener">WhatsApp: (14) 99658-7793</a>
+        <p>Atendimento residencial e industrial</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Júnior Coifas. Todos os direitos reservados.</span>
+      <span>Limpeza e higienização de coifas residenciais e industriais.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5514996587793" target="_blank" rel="noopener" class="wa-float" aria-label="Fale com a Júnior Coifas no WhatsApp">
+  <span class="wa-tooltip">Fale com a Júnior Coifas</span>
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.638 4.47 1.744 6.316L4 29l7.86-1.706A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm0 21.6a9.55 9.55 0 01-4.878-1.34l-.35-.207-4.66 1.012 1.037-4.55-.229-.365A9.56 9.56 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6s9.6 4.297 9.6 9.6-4.297 9.6-9.6 9.6zm5.29-7.19c-.29-.145-1.71-.844-1.975-.94-.264-.096-.457-.145-.65.145-.192.29-.746.94-.914 1.134-.169.193-.337.217-.626.072-.29-.145-1.223-.451-2.33-1.437-.861-.767-1.442-1.715-1.611-2.005-.169-.29-.018-.446.127-.59.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.096-.193.048-.362-.024-.507-.072-.145-.65-1.566-.89-2.146-.234-.564-.472-.487-.65-.496l-.554-.01c-.193 0-.507.072-.772.362-.264.29-1.01.988-1.01 2.409s1.034 2.793 1.178 2.987c.145.193 2.035 3.106 4.93 4.354.689.298 1.226.476 1.645.61.691.22 1.32.189 1.818.115.554-.083 1.71-.699 1.951-1.373.241-.674.241-1.252.169-1.373-.072-.12-.264-.193-.554-.338z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('show');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('show');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if (isOpen) {
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Before/after slider
+  const slider = document.getElementById('baSlider');
+  const beforeWrap = document.getElementById('baBeforeWrap');
+  const beforeImg = document.getElementById('baBeforeImg');
+  const handle = document.getElementById('baHandle');
+
+  function setSlider(percent){
+    percent = Math.max(4, Math.min(96, percent));
+    beforeWrap.style.width = percent + '%';
+    handle.style.left = percent + '%';
+    const sliderWidth = slider.offsetWidth;
+    beforeImg.style.width = sliderWidth + 'px';
+  }
+
+  function updateFromClientX(clientX){
+    const rect = slider.getBoundingClientRect();
+    const percent = ((clientX - rect.left) / rect.width) * 100;
+    setSlider(percent);
+  }
+
+  let dragging = false;
+  slider.addEventListener('mousedown', (e) => { dragging = true; updateFromClientX(e.clientX); });
+  window.addEventListener('mousemove', (e) => { if(dragging) updateFromClientX(e.clientX); });
+  window.addEventListener('mouseup', () => dragging = false);
+
+  slider.addEventListener('touchstart', (e) => { dragging = true; updateFromClientX(e.touches[0].clientX); }, {passive:true});
+  slider.addEventListener('touchmove', (e) => { if(dragging) updateFromClientX(e.touches[0].clientX); }, {passive:true});
+  slider.addEventListener('touchend', () => dragging = false);
+
+  window.addEventListener('resize', () => setSlider(parseFloat(beforeWrap.style.width) || 50));
+  window.addEventListener('load', () => setSlider(50));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
